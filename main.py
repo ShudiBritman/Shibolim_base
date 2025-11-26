@@ -13,8 +13,9 @@ def hello():
 
 
 @app.post("/assignWithCsv/")
-def upload_csv(file: UploadFile):
-    load_csv(file)
+def soldier_insert(file: UploadFile):
+    data = load_csv(file)
+    return data
 
 
 

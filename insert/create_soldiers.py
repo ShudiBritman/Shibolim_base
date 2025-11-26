@@ -1,10 +1,13 @@
 from base.soldier import Soldier
+from .insert import insert_by_distance
 
 def create_all_soldiers(all_soldiers):
     list_of_soldiers = []
     for soldier in all_soldiers:
         s_soldier = create_soldier(soldier)
         list_of_soldiers.append(s_soldier)
+    soldiers_insert = insert_by_distance(list_of_soldiers)
+    return soldiers_insert
 
 
 

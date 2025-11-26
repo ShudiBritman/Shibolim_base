@@ -1,4 +1,4 @@
-from room import Room
+from .room import Room
 
 
 class Home:
@@ -8,12 +8,16 @@ class Home:
 
 
     def add_room(self):
+        rooms = []
         for i in range(self.max_room):
             room = Room()
-            self.list_of_rooms.append(room)
-        return self.list_of_rooms
+            rooms.append(room)
+        return rooms
 
     def Check_occupancy(self):
         return len(self.list_of_rooms) < self.max_room
+
+
+
 
 
