@@ -2,8 +2,11 @@ from .room import Room
 
 
 class Home:
+    home_id = 0
     def __init__(self):
+        Home.home_id += 1
         self.max_room = 10
+        self.id = Home.home_id
         self.list_of_rooms = self.add_room()
 
 

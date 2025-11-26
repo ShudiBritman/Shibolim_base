@@ -1,12 +1,10 @@
 from base.home import Home
+from base.create_homes import create_homes
 
 
 
-def insert_by_distance(soldiers):
-    #soldiers = bobble_sort(soldiers)
-    home1 = Home()
-    home2 = Home()
-    homes = [home1, home2]
+def sort_by_distance(soldiers):
+    homes = create_homes()
     soldiers.sort(key=lambda s: s.distance)
     response_dict = add_soldier_to_room(homes, soldiers)
     return response_dict

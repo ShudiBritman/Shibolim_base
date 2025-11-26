@@ -1,13 +1,14 @@
 from base.soldier import Soldier
-from insert import insert_by_distance
+from .insert import sort_by_distance
+#from dal.soldier_dal import insert_table_soldiers
 
 def create_all_soldiers(all_soldiers):
     list_of_soldiers = []
     for soldier in all_soldiers:
         s_soldier = create_soldier(soldier)
-        if s_soldier:
-            list_of_soldiers.append(s_soldier)
-    soldiers_insert = insert_by_distance(list_of_soldiers)
+        list_of_soldiers.append(s_soldier)
+    #insert_table_soldiers(list_of_soldiers)
+    soldiers_insert = sort_by_distance(list_of_soldiers)
     return soldiers_insert
 
 
