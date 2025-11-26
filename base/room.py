@@ -9,3 +9,6 @@ class Room:
             print("adding a soldier")
             return True
         return False
+
+    def Check_occupancy(self):
+        return len(self.list_of_soldiers) < self.bed_amount
